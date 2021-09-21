@@ -1,0 +1,175 @@
+/* --------------- INITIAL_SETUP --------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* a {
+    background: yellow;
+} */
+html,
+body {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    height: 100%;
+    padding: 0 2%;
+    /* why */
+}
+h1 {
+    font-weight: 700;
+    font-size: 20px;
+}
+h2 {
+    font-family: 'Kaisei HarunoUmi', serif;
+    text-align: center;
+    font-size: 34px;
+}
+
+
+/* --------------- INITIAL_SETUP --------------- */
+nav {
+    padding: 30px 0 40px;
+    font-size: 11px;
+    display: flex;
+    flex-direction: row;
+}
+nav ul {
+    flex: 1;       /* so it fills the remaining space and we can apply flex-end later */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 50%);
+}
+nav li {
+    display: inline-block;
+    padding: 10px 0;
+    margin-left: 30px;
+}
+nav li img {
+    height: 20px;
+    width: auto;
+}
+nav a {
+    text-decoration: none;
+}
+
+
+/* --------------- HEADER --------------- */
+.background {
+    /* display: inline-block; */
+    /* width: 70%; */
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)), url(img/background4.png);
+    background-size: 70%;        
+    /* size of the img */
+    background-repeat: repeat-y;
+    background-position-x: left;
+    background-position-y: 58%;
+    background-attachment: fixed;    
+    /*super cool effect where the image does not move*/
+}
+.content {
+    display: inline-block;
+    /* so I can apply margin and padding */
+    background: #fff;
+    text-align: justify;
+    margin-left: 55%;
+    margin-top: 8vh;
+    margin-right: 5%;
+    padding: 50px;
+}
+.content p {
+    padding-top: 30px;
+}
+
+/* --------------- Section_PRODUCTS --------------- */
+#artworks {
+    padding: 80px 0 80px;
+}
+.fancyBorder {
+    display: block;       /* these first 3 prop. to center the img */
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: auto;
+}
+.products_display {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    justify-content: space-around;   /* not between bc in smll screen, there is no margin left */
+}
+.products_display::after {
+    content: "";
+    flex: auto;
+}
+.product {
+    margin: 0 30px;
+    text-align: center;
+}
+.product img {
+    box-shadow: 1px 1px 20px -5px rgba(0, 0, 0, 50%);
+}
+
+
+
+
+
+/* following 2 prop.: for display prperly the img inside the a */
+.product img { display: block; }
+.product a { display: inline-block; }
+
+.in8x10 {
+    margin-bottom: 20px;
+}
+.in8x10 img {
+    height: 250px;
+    width: auto;
+}
+.in7x9 {
+    margin: 10px 20px 30px;
+}
+.in7x9 img {
+    height: 230px;
+    width: auto;
+}
+.in4x4 {
+    margin: 50px 20px 70px;
+}
+.in4x4 img {
+    height: 150px;
+    width: auto;
+}
+.exhi {
+    color: red;
+    font-size: 10px;
+}
+
+
+
+.product {
+    position: relative;
+}
+.product div{
+    position: absolute;
+    color: #fff;
+    /* z-index: 1; */
+    opacity: 0;
+}
+.in8x10{
+    background: #000;
+}
+.in8x10 img:hover {
+    opacity: 0.3;
+}
+
