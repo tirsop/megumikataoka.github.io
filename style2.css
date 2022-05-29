@@ -1,0 +1,179 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@400;500;700&family=League+Spartan:wght@100;200;300;400;500;700&display=swap');
+
+/* GENERAL SETUP */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a { 
+  text-decoration: none; 
+  display: inline-block;
+}
+ul { list-style: none; }
+
+main {
+  width: 100%;
+  max-width: 930px;
+  background: #fff;
+  margin: auto;
+}
+body {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 300;
+}
+h1 {
+  font-family: 'Spartan', sans-serif;;
+  font-weight: 400;
+  font-size: 24px;
+}
+h2 {
+  font-family: 'Kaisei HarunoUmi', serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+
+/* --------------- NAVBAR --------------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+nav .links {
+  display: flex;
+  align-items: center;
+}
+nav .links li {
+  margin-right: 30px;
+}
+.nav-logo {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 50%);
+}
+
+
+/* --------------- HEADER --------------- */
+.header-bg {
+  height: 42vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)), url(img/relaxing.jpeg);
+  background-repeat: no-repeat;
+  background-size: 78%;          
+  background-position-x: left;
+  background-position-y: 60%;
+  background-attachment: fixed; 
+  display: flex;
+  align-items: center;
+}
+.header-content {
+  background: #fff;
+  max-width: 315px;
+  position: relative;
+  left: 65%;
+  text-align: justify;
+  padding: 40px 48px;
+}
+.header-content p {
+  padding-top: 24px;
+  color: rgb(111, 125, 138);
+  font-size: 14px;
+}
+
+
+/* --------------- SECTION TITLE --------------- */
+.title {
+  text-align: center;
+  padding: 80px 0;
+}
+.fancyBorder {
+  display: block;       /* these first 2 prop. to center the img */
+  margin: 0 auto;
+  width: 500px;
+  height: auto;
+  padding-top: 20px;
+}
+
+
+/* --------------- ARTWORKS --------------- */
+.products_display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.products_display img {
+  width: 300px;
+  height: auto;
+  display: block;   /* so the img ocuppies only its space */
+  margin: 0 auto 10px;
+}
+.column {
+  overflow: scroll;
+  height: 800px;
+}
+
+
+/* --------------- CONTACT --------------- */
+form {     /* to center the form in the page */
+  display: grid;
+  justify-content: center;
+}
+.field {     /* to separate input and label */
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+  margin-bottom: 8px;
+}
+textarea {
+  justify-self: end;
+  width: 100%;
+}
+.btn-form {
+  justify-self: center;     /* so the button ocuppies only its length */
+  margin-top: 16px;
+  background: none;
+  border: 2px solid;
+  border-radius: 50px;
+  line-height: 1;
+  padding: 1em 2em;
+  color: #a972cb;
+  transition: 0.25s;
+}
+.btn-form:hover,
+.btn-form:focus { 
+    border-color: #a972cb;
+    color: #fff;
+    box-shadow: inset 0 0 0 2em #a972cb;
+}
+
+
+/* --------------- FOOTER --------------- */
+.copyright {
+  margin-top: 48px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+}
+.madeby{
+  text-align: center;
+  padding-top: 8px;
+  font-size: 12px;
+  color: gray;
+}
+.tirsop {
+  text-align: center;
+  padding: 10px 0 50px;
+} 
+.avatar {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  filter: brightness(80%);
+  transition: transform 0.5s, filter 0.5s;
+}
+.avatar:hover {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
