@@ -111,9 +111,10 @@ nav .links li {
 .products_display {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 8px;
 }
 .products_display img {
-  width: 300px;
+  width: 100%;
   height: auto;
   display: block;   /* so the img ocuppies only its space */
   margin: 0 auto 10px;
@@ -219,32 +220,24 @@ textarea {
 /* --------------- MEDIA_QUERIES--------------- */
 @media (max-width: 966px) {
   main { max-width: 750px; }
-  .products_display img { width: 240px; }
 }
 @media (max-width: 768px) {
   main { max-width: 630px; }
-  .products_display img { width: 200px; }
   .column { height: 580px; }
 }
 @media (max-width: 640px) {
   main { max-width: 510px; }
-  .products_display img { 
-    width: 164px; 
-    margin-bottom: 6px;
-  }
+  .products_display img { margin-bottom: 6px; }
   .column { height: 460px; }
 }
-
 @media (max-width: 547px) {
   .products_display {
     grid-template-columns: repeat(1, 1fr);
+    margin: 0 24px;
   }
   .column {
     overflow: visible;
     height: auto;
-  }
-  .products_display img {
-    width: 300px;
   }
   .fancyBorder {
     width: 330px;
